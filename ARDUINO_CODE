@@ -1,0 +1,38 @@
+int REDled=7;
+int YELled=6;
+int GREled=1;
+ int BP=0;
+ int buttonstate=0;
+void setup() {
+  pinMode(REDled,OUTPUT);
+  pinMode(YELled,OUTPUT);
+  pinMode(GREled,OUTPUT);
+  pinMode(BP, INPUT);
+}
+void loop(){
+  buttonstate=digitalRead(BP);
+  
+  
+  digitalWrite(REDled,HIGH);
+  delay(6000);
+  digitalWrite(REDled,LOW);
+  digitalWrite(YELled,HIGH);
+  delay(3000);
+  digitalWrite(YELled,LOW);
+  digitalWrite(GREled,HIGH);
+  delay(6000);
+  digitalWrite(GREled,LOW);
+  
+  
+  
+  if (buttonstate == HIGH){
+    digitalWrite(REDled,HIGH);
+    delay(4000);
+    digitalWrite(REDled,LOW);
+  }
+  
+  
+}
+  
+
+
